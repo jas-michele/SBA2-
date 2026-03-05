@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <h1>Accessible Design Co.</h1>
         <img id="logo" src="./images.jpeg" alt="head phones image">
 
         <nav>
@@ -20,14 +21,95 @@
         </nav>
     </header>
     <main>
-        <section class="hero-section">
+
+        <section class="hero-section" id="home">
             <div>
-                <img src="./maxresdefault.jpg">
+                <img src="./maxresdefault.jpg" alt="computers">
                 <h1>Designs that work for everyone!</h1>
                 <button>Get Started</button>
             </div>
         </section>
-    </main>
+
+        <section class="about-us" id="aboutus"> 
+            <div>
+                <h2>About Us</h2>
+                <p>
+                    At Accessible Design Co, we believe the web should work for everyone. Our mission is to create thoughtful , user-friendly designs that are inclusive, esy to navigate, and accessibleto people of all abilities.
+                </p>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="grid-container">
+               
+                <div class="services keyboard">
+                    
+                        <img src="./Pink1.jpg.webp" alt="pink keyboard">
+                        
+                            <h3>Keyboard Navigation</h3>
+                            <p>Ensuring websites can be used without a mouse.</p>
+                  </div>
+                
+                <div class="services headphones">
+                    
+                        <img src="./images.jpeg" alt="headphones">
+                            <h3>Screen Reader Support</h3>
+                            <p>Design optimized for assistive technologies.<p>
+                </div>
+
+                <div class="services eye">
+
+                        <img src="./eye.jpg" alt="eye icon">
+                        
+                            <h3>Visual Accessibilty</h3>
+                            <p>Design that improves readanility and usability.</p>
+                    
+                </div>
+
+                <div class="services color">
+                   
+                        <img src="./color-palette.jpg" alt="color wheel">
+                            <h3>Accessible Color Design</h3>
+                            <p>High contrast color systems for better visibility.</p>
+                        
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div>
+                <form>
+                    <h1>Contact Form</h1>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required 
+                    aria-invalid="true">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required
+                    aria-invalid="true">
+                    <br>
+                    <label for="subject">Subjecr:</label>
+                    <input type="text" id="subject" name="subject" required
+                    aria-invalid="true">
+                    <br>
+                    <label for="message">Message:</label>
+                    <textarea></textarea>
+                    <br>
+                    <button aria-label="click to submit form">Submit</button>
+                    <div role="alert" aria-live="polite">Form submited successfully!</div> 
+                 </form>
+            </div>
+        </section>
+ </main>
+
+ <footer>
+    <div>
+        <h3>Copyright Information</h3>
+        <h3>Social Media</h3>
+        <h3>Contact us</h3>
+    </div>
+ </footer>
     
 </body>
 </html>
