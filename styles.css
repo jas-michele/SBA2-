@@ -1,0 +1,145 @@
+nav ul {
+    color: #392B58;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+header img {
+    height: 30px;
+    width: auto;
+}
+
+body {
+    background-color: #C8C8C8;
+}
+
+.hero-section {
+    height: 50vh;
+    background-image: url(./maxresdefault.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.hero-section h1 {
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    font-size: 60px;
+    padding: 20px;
+}
+
+.hero-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.keyboard img {
+    width: 300px;
+    height: auto;
+    
+}
+
+.color img {
+    width: 300px;
+    height: auto;
+}
+
+.eye img {
+    width: 300px;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-areas: "keyboard keyboard headphones"
+                         "eye eye color";
+    
+   max-width: 500px;
+   margin: 0 auto;                      
+}
+
+
+.services {
+    text-align: center;
+}
+
+.services div {
+    background: #C8C8C8;
+    padding: 20px;
+    border: 8px;
+}
+
+.keyboard {
+    grid-area: keyboard;
+}
+
+.headphones {
+    grid-area: headphones;
+}
+
+.eye {
+    grid-area: eye;
+}
+
+.color {
+    grid-area: color;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input:invalid {
+    border: 3px solid red;
+}
+
+input:valid {
+    border: 3px solid green;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}

@@ -1,115 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessible Desgin Co.</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <h1>Accessible Design Co.</h1>
-        <img id="logo" src="./images.jpeg" alt="head phones image">
 
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body>
     <main>
 
+        <header>
+
+            <img id="logo" src="./logoipsum-411.png" alt="Accessible Design Co logo">
+            <h1>Accessible Design Co.</h1>
+            <nav role="navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <section class="hero-section" id="home">
-            <div>
-                <img src="./maxresdefault.jpg" alt="computers">
+            <div class="hero-content">
                 <h1>Designs that work for everyone!</h1>
-                <button>Get Started</button>
+                <button onclick="location.href='contact'">Get Started</button>
             </div>
         </section>
 
-        <section class="about-us" id="aboutus"> 
+        <section class="about-us" id="aboutus">
             <div>
                 <h2>About Us</h2>
                 <p>
-                    At Accessible Design Co, we believe the web should work for everyone. Our mission is to create thoughtful , user-friendly designs that are inclusive, esy to navigate, and accessibleto people of all abilities.
+                    At Accessible Design Co, we believe the web should work for everyone. Our mission is to create
+                    thoughtful , user-friendly designs that are inclusive, esy to navigate, and accessible to people of
+                    all abilities.
                 </p>
             </div>
         </section>
 
         <section class="services" id="services">
+
+            <h2>Services</h2>
             <div class="grid-container">
-               
+
                 <div class="services keyboard">
-                    
-                        <img src="./Pink1.jpg.webp" alt="pink keyboard">
-                        
-                            <h3>Keyboard Navigation</h3>
-                            <p>Ensuring websites can be used without a mouse.</p>
-                  </div>
-                
+
+                    <img src="./Pink1.jpg.webp" alt="pink keyboard">
+
+                    <h3>Keyboard Navigation</h3>
+                    <p>Ensuring websites can be used without a mouse.</p>
+                </div>
+
                 <div class="services headphones">
-                    
-                        <img src="./images.jpeg" alt="headphones">
-                            <h3>Screen Reader Support</h3>
-                            <p>Design optimized for assistive technologies.<p>
+
+                    <img src="./images.jpeg" alt="headphones">
+                    <h3>Screen Reader Support</h3>
+                    <p>Design optimized for assistive technologies.
+                    <p>
                 </div>
 
                 <div class="services eye">
 
-                        <img src="./eye.jpg" alt="eye icon">
-                        
-                            <h3>Visual Accessibilty</h3>
-                            <p>Design that improves readanility and usability.</p>
-                    
+                    <img src="./eye.jpg" alt="visual accessibilty icon>
+
+                    <h3>Visual Accessibilty</h3>
+                    <p>Design that improves readanility and usability.</p>
+
                 </div>
 
                 <div class="services color">
-                   
-                        <img src="./color-palette.jpg" alt="color wheel">
-                            <h3>Accessible Color Design</h3>
-                            <p>High contrast color systems for better visibility.</p>
-                        
+
+                    <img src="./color-palette.jpg" alt="color wheel">
+                    <h3>Accessible Color Design</h3>
+                    <p>High contrast color systems for better visibility.</p>
+
                 </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section class="contact" id="contact">
             <div>
                 <form>
-                    <h1>Contact Form</h1>
+                    <h2>Contact Form</h2>
 
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required 
-                    aria-invalid="true">
+                    <p id="nameHelp">Please enter your full name.</p>
+                    <input type="text" id="name" name="name" aria-describedby="nameHelp" required aria-invalid="true">
+
                     <br>
+
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required
-                    aria-invalid="true">
+                    <input type="email" id="email" name="email" required aria-invalid="true">
+
                     <br>
-                    <label for="subject">Subjecr:</label>
-                    <input type="text" id="subject" name="subject" required
-                    aria-invalid="true">
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required aria-invalid="true">
+
                     <br>
+
                     <label for="message">Message:</label>
-                    <textarea></textarea>
+                    <textarea id="message" name="message" required></textarea>
+
                     <br>
+
                     <button aria-label="click to submit form">Submit</button>
-                    <div role="alert" aria-live="polite">Form submited successfully!</div> 
-                 </form>
+                    <div role="alert" aria-live="polite">Form submited successfully!</div>
+                </form>
             </div>
         </section>
- </main>
 
- <footer>
-    <div>
-        <h3>Copyright Information</h3>
-        <h3>Social Media</h3>
-        <h3>Contact us</h3>
-    </div>
- </footer>
-    
+    </main>
+    <footer>
+        <p>2026 Accessible Design Co.</p>
+
+        <nav aria-label="Social Media">
+            <a href="https://www.linkedin.com" target="_blank">linkedIn</a>
+            <a href="https://www.facebook.com/" target="_blank">FaceBook</a>
+            <a href="https://www.instagram.com/?hl=en" target="_blank">Instagram</a>
+        </nav>
+        <p>Email: contact@accessibledesign.com</p>
+    </footer>
+
 </body>
+
 </html>
